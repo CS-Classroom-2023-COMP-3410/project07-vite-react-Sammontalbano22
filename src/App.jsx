@@ -6,6 +6,14 @@ import ProfilePage from './components/ProfilePage.jsx';
 import ShoppingCart from './components/ShoppingCart.jsx';
 function App() {
 const [currentPage, setCurrentPage] = useState('home');// Simple navigation state management
+const [cart, setCart] = useState([]);
+  // Remove item from cart
+  const removeFromCart = (productId) => {
+    setCart(cart.filter(item => item.id !== productId));
+  };
+  // Calculate total price
+  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
 const handleNavigate = (pageId) => {
 setCurrentPage(pageId);// This could be expanded to handle page transition animations
 // or to update browser history for back/forward navigation

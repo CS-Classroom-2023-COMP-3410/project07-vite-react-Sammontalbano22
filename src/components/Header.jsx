@@ -10,7 +10,7 @@ const navItems = [
 { id: 'home', label: 'Home' },
 { id: 'products', label: 'Products' },
 { id: 'profile', label: 'Profile' },
-{ id: 'shopping-cart', label: 'Shopping Cart' }
+{ id: 'shopping-cart', label: 'ShoppingCart' }
 ];
 return (
 <header style={navStyle}>
